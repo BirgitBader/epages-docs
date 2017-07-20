@@ -13,7 +13,7 @@ The following resources are available to work with script tags:
 
 <ul id="resource-list">
   {% for page in site.pages %}
-    {% assign match = page.key | regex_match: '^apps-api-([a-z]+)-shopid-script-tags(.*)-information$' %}
+    {% assign match = page.key | regex_match: '^apps-api-([a-z]+)-script-tags(.*)-information$' %}
     {% if match %}
       <li class="resource-entry">
         <span class="http-method http-method-{{ page.raml_method.method | downcase }}">{{ page.raml_method.method }}</span>

@@ -287,7 +287,7 @@ title: #{resource.capitalize.pluralize}
 ---
 <ul id=\"resource-list\">
   {% for page in site.pages %}
-    {% assign match = page.key | regex_match: '^apps-api-([a-z]+)-shops-shopid-#{resource.pluralize}(.*)-information$' %}
+    {% assign match = page.key | regex_match: '^apps-api-([a-z]+)-shops-#{resource.pluralize}(.*)-information$' %}
     {% if match %}
       <li class=\"resource-entry\">
         <span class=\"http-method http-method-{{ page.raml_method.method | downcase }}\">{{ page.raml_method.method }}</span>

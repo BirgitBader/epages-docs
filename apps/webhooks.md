@@ -21,7 +21,7 @@ Your app might require the following information:
 
 ## Ready to start creating a webhook
 
-To create a webhook, make a [`POST` request](page:apps-api-post-shopid-webhooks-information) to the respective webhook resource, including:
+To create a webhook, make a [`POST` request](page:apps-api-post-webhooks-information) to the respective webhook resource, including:
 
 * The app's `callbackUrl` (has to be `https`)
 * The `eventType`
@@ -61,7 +61,7 @@ A notification would look like this:
 | `entityUrl`   | string | The URL to the entity. |
 | `createdOn`  | string | The time the notification was created. |
 | `eventType`  | string | The event that triggers the webhook. Can be *ORDER_CREATE*, *ORDER_UPDATE*, *ORDER_DELETE* or *APP_UNINSTALL*. |
-| `entity`   | object | Can be either empty or shows the object the event type is about (e.g. in case of an order event, it contains the affected order, just like e.g. a [`GET` orders/{orderId}](https://developer.epages.com/apps/api-reference/get-shopid-orders-orderid) request.  |
+| `entity`   | object | Can be either empty or shows the object the event type is about (e.g. in case of an order event, it contains the affected order, just like e.g. a [`GET` orders/{orderId}](https://developer.epages.com/apps/api-reference/get-orders-orderid) request.  |
 
 Depending on server traffic, notifications on events might take a few seconds.
 
@@ -151,8 +151,8 @@ The maximum retry limit is 11 retries that are set as follows:
 
 After the last retry attempt, the webhook will be deactivated.
 We will send a notification to the email address that you used for the registration to our Developer Program.
-To activate the webhook again, set `active` to `true` using the [`POST` webhooks/{webhookId}](page:apps-api-post-shopid-webhooks-webhookid-information) request.
+To activate the webhook again, set `active` to `true` using the [`POST` webhooks/{webhookId}](page:apps-api-post-webhooks-webhookid-information) request.
 
 ## Update or delete a webhook
 
-To update or delete a webhook, use the [`POST` webhooks/{webhookId}](page:apps-api-post-shopid-webhooks-webhookid-information) or [`DELETE` webhooks/{webhookId}](page:apps-api-delete-shopid-webhooks-webhookid-information) respectively.
+To update or delete a webhook, use the [`POST` webhooks/{webhookId}](page:apps-api-post-webhooks-webhookid-information) or [`DELETE` webhooks/{webhookId}](page:apps-api-delete-webhooks-webhookid-information) respectively.

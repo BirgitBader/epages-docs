@@ -39,4 +39,4 @@ gem 'epages-rest'
 {% endhighlight %}
 
 I am already working on the features for the next version.
-It will include the [Sales call](https://developer.epages.com/apps/api-reference/get-shops-shopid-sales.html) and a new feature to implement concurrent calls, ideal for faster data collection.
+It will include the [Sales call](https://developer.epages.com/apps/api-reference/get-shops-sales.html) and a new feature to implement concurrent calls, ideal for faster data collection.
